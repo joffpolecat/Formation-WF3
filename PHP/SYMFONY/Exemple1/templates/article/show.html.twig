@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+    <article>
+    {% embed 'decorator/_card.html.twig' %}
+    {% block header %} 
+    <h2>{{ entity.title }}</h2>
+    {% endblock %}
+
+    {% block body %} 
+    {{ entity.content|raw }}
+    {% endblock %}
+
+    {% block footer %}  
+    <div class="row">
+        <div class="col-md-3"> Rédigé le : {{ entity.dateCreate|date('d/m/Y H:i') }}</div>
+        <div class="col-md-8 text-right follower-count">{{ 'article.followers'|transchoice(entity.articleFollows|length, {'%count%': entity.articleFollows|length}) }}</div>
+        
+        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            <div class="col-md-1 text-right">
+                {{ form_start(form) }} 
+                    <button type="submit" class="btn follow-button btn-sm text-light {% if isFollow %} bg-danger{% else %} bg-secondary {% endif %}"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                {{ form_end(form) }}
+            </div>
+        {% endif %}
+    </div>
+    {% endblock %}
+ {% endembed %}
+ </article>
+{% endblock %}

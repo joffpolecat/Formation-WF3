@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6">
+        {{ form_row(form.title) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(form.categories) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        {{ form_row(form.deleteImage) }}
+        {{ form_row(form.image) }}
+    </div>
+    <div class="col-md-4">
+        {% if entity.image is not empty %}
+            <img class="" src="{{ asset('/uploads/' ~ entity.image.path) }}" alt="{{ entity.image.name }}" /> 
+        {% endif %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.content) }}
+    </div>
+</div>

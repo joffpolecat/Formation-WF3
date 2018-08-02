@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}" /> {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+        {% for type, messages in app.flashes %}
+             {% for message in messages %}
+                <div class="alert alert-{{ type }} alert-dismissible fade show">{{ message|raw }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% block main_content %}
+             {% block body %}{% endblock %}
+        {% endblock %}
+            <script src="{{ asset('build/js/app.js') }}"></script>
+            {{ tinymce_init() }}
+        {% block javascripts %}{% endblock %}
+</body>
+
+</html>

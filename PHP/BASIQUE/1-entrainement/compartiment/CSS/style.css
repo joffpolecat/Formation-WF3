@@ -1,0 +1,30 @@
+div#conteneur{
+    margin: 0 auto;
+    width: 98%;
+    box-shadow: 1px 1px 6px;
+    }
+    
+    header{
+    background: #d0d0d0;
+    padding: 10px;
+    }
+    header h1, header img{ display: inline; }
+    
+    nav, footer{
+    height: 20px;
+    background: #4d4d4d;
+    }
+    nav ul {
+        margin: 0;
+    }
+    nav ul li {
+        list-style: none;
+        display: inline;
+    }
+    nav  ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    }
+    
+    section{ padding: 20px; }

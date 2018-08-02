@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="title" >Titre</label>
+    <input type="text" class="form-control" id="title" name="title" value="{{ entity.title }}" />
+</div>
+<div class="form-group">
+    <label for="content" >Contenu</label>
+    <textarea name="content" id="content" class="form-control" >{{ entity.content }}</textarea>
+</div>
+<input type="hidden" name="id" value="{{ entity.id }}" />

@@ -1,0 +1,15 @@
+Maison: Maison1
+Matériaux structure: Briques
+Matériaux toiture: Tuiles
+Pièces: 
+PIECES 0 
+        Nom: Chambre 1
+        Surface: 16
+        Hauteur: 2.5
+        Nombre de fenêtre: 0
+            PIECES 1 
+        Nom: Cuisine
+        Surface: 20
+        Hauteur: 2.5
+        Nombre de fenêtre: 0
+                

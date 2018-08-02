@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            // Appel AJAX natif d'une page
+            
+            // Créer un objet XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            
+            // Préparer la requête
+            xhr.open('GET', "http://cours.wtf.fr", true);
+            
+            // Traîter la requête
+            xhr.onreadystatechange = function () {
+                if(this.readyState == 4 && this.status == 200)
+                {
+
+                }
+            };
+            
+            // Envoyer la requête
+            xhr.send();
+        </script>
+    </body>
+</html>

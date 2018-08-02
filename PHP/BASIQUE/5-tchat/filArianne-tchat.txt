@@ -1,0 +1,112 @@
+Nous allons faire un module de tchat/commentaire qu'on pourrait retrouer sur une plateforme (ex: YouTube)
+
+
+_______________________________
+
+Découpons ensemble les étapes :
+_______________________________
+
+_____
+#1 - Créer la BDD (PHPMYADMIN ou CONSOLE)
+
+    > Table commentaire
+
+        - id_message (PK) -> INT 5 
+        - id_membre (FK aka Foreign Key) -> INT 3
+        - pseudo -> VARCHAR 20
+        - message -> TEXT
+        - date/heure d'enregistrement -> DATETIME
+        
+    __________________________________________
+
+    > Table membre
+
+        - id_membre -> INT 3 (PK)
+        - pseudo -> VARCHAR 20
+        - password -> VARCHAR 50
+        - email -> VARCHAR 50
+        - avatar -> VARCHAR 50
+
+_____
+#2 - Connexion à la BDD
+
+_____
+#3 - Formulaire
+
+    > Inscription
+    > Connexion
+
+_____
+#4 - Récupération, affichage des saisies POST + contrôle de sécurité
+
+
+_____
+#5 - Inscription : enregistrer les informations dans la table "membres"
+
+    > membre >> Requête SQL INSERT
+
+
+_____
+#6 - Connexion : Envoyer les informations de la table "membres"
+
+
+_____
+#7 - Création de formulaire pour déposer un message
+
+
+_____
+#8 - Récupération, affichage des saisies POST 
+
+
+_____
+#9 - Enregistrer les messages dans la table "commentaires"
+
+    > commentaires >> Requête SQL INSERT
+
+_____
+#10 - Afficher tous les messages de la table "commentaires"
+
+
+_____
+#11 - Prévoir notre V.2
+
+
+
+__________________________________________
+
+#1 - Création de la BDD
+
+    > tchat - utf8_general_ci
+    > Nouvelle table : membre
+
+        SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+        SET AUTOCOMMIT = 0;
+        START TRANSACTION;
+        SET time_zone = "+00:00";
+        DROP TABLE IF EXISTS `membre`;
+        CREATE TABLE IF NOT EXISTS `membre` (
+        `id_membre` int(3) NOT NULL AUTO_INCREMENT,
+        `pseudo` varchar(20) NOT NULL,
+        `password` varchar(50) NOT NULL,
+        `email` varchar(50) NOT NULL,
+        `avatar` varchar(50) NOT NULL,
+        PRIMARY KEY (`id_membre`)
+        ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        COMMIT;
+
+    > Nouvelle table : commentaire
+
+        SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+        SET AUTOCOMMIT = 0;
+        START TRANSACTION;
+        SET time_zone = "+00:00";
+        DROP TABLE IF EXISTS `commentaire`;
+        CREATE TABLE IF NOT EXISTS `commentaire` (
+        `id_message` int(5) NOT NULL AUTO_INCREMENT,
+        `id_membre` int(3) NOT NULL,
+        `pseudo` varchar(20) NOT NULL,
+        `message` text NOT NULL,
+        `date_enregistrement` datetime NOT NULL,
+        PRIMARY KEY (`id_message`)
+        ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        COMMIT;

@@ -1,0 +1,15 @@
+body {
+  padding-top: 5rem;
+}
+
+#body {
+  /* C'est sensé fonctionner mais j'ai 0 retour ಠ_ಠ */
+  background-image: url(../../../ressources/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+} 

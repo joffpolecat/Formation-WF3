@@ -1,0 +1,68 @@
+/*
+	Polices chargées :
+
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto Slab', serif;
+
+	variantes :
+	Roboto Condensed: 400,700
+	Roboto: 500
+	Roboto Slab: 400,700
+*/
+
+
+
+/*----------  layout & types  ----------*/
+
+body {
+	background-color: #f7f7f7;
+}
+
+.wrapper {
+	width: 1170px;
+	border: 1px solid red;
+	margin: 0px auto;
+}
+
+
+/*----------  grid  ----------*/
+
+/* mise en page simple avec Flex pour un colonnage */
+.container {
+	display: flex;
+}
+
+.col {
+	flex: 1;
+}
+
+
+/*----------  header  ----------*/
+
+.main-header {
+	background-color: #cacaca;
+}
+
+.main-header {
+	background-color: #cacaca;
+	border-bottom: 8px solid #dcdcdc; 
+}
+
+.main-header .wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/*----------  main  ----------*/
+
+
+
+/*----------  footer  ----------*/
+
+
+.main-footer {
+	background-color: #000;
+}

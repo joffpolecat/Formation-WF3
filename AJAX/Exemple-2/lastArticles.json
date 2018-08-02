@@ -1,0 +1,29 @@
+{
+    "count" : 4,
+    "articles" : [
+        {
+            "id": 1,
+            "title": "Article 1",
+            "img": "http://www.picsum.photos/120?random&image=1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed felis posuere, interdum lacus quis, luctus elit. Phasellus ut iaculis turpis. Praesent eget cursus mi, vitae pulvinar nulla. Suspendisse blandit finibus augue in mattis. Donec pharetra auctor nisl, auctor condimentum erat ullamcorper quis. Nulla turpis nulla, tristique id lobortis a, feugiat sit amet justo. Duis eleifend arcu in sollicitudin mollis. Praesent nec diam dui. Quisque sed purus nisi. Aenean faucibus quam quis lacus ullamcorper tempor. Curabitur rutrum rhoncus tempor."
+        },
+        {
+            "id": 2,
+            "title": "Article 2",
+            "img": "http://www.picsum.photos/120?random&image=2",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed felis posuere, interdum lacus quis, luctus elit. Phasellus ut iaculis turpis. Praesent eget cursus mi, vitae pulvinar nulla. Suspendisse blandit finibus augue in mattis. Donec pharetra auctor nisl, auctor condimentum erat ullamcorper quis. Nulla turpis nulla, tristique id lobortis a, feugiat sit amet justo. Duis eleifend arcu in sollicitudin mollis. Praesent nec diam dui. Quisque sed purus nisi. Aenean faucibus quam quis lacus ullamcorper tempor. Curabitur rutrum rhoncus tempor."
+        },
+        {
+            "id": 3,
+            "title": "Article 3",
+            "img": "http://www.picsum.photos/120?random&image=3",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed felis posuere, interdum lacus quis, luctus elit. Phasellus ut iaculis turpis. Praesent eget cursus mi, vitae pulvinar nulla. Suspendisse blandit finibus augue in mattis. Donec pharetra auctor nisl, auctor condimentum erat ullamcorper quis. Nulla turpis nulla, tristique id lobortis a, feugiat sit amet justo. Duis eleifend arcu in sollicitudin mollis. Praesent nec diam dui. Quisque sed purus nisi. Aenean faucibus quam quis lacus ullamcorper tempor. Curabitur rutrum rhoncus tempor."
+        },
+        {
+            "id": 4,
+            "title": "Article 4",
+            "img": "http://www.picsum.photos/120?random&image=4",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed felis posuere, interdum lacus quis, luctus elit. Phasellus ut iaculis turpis. Praesent eget cursus mi, vitae pulvinar nulla. Suspendisse blandit finibus augue in mattis. Donec pharetra auctor nisl, auctor condimentum erat ullamcorper quis. Nulla turpis nulla, tristique id lobortis a, feugiat sit amet justo. Duis eleifend arcu in sollicitudin mollis. Praesent nec diam dui. Quisque sed purus nisi. Aenean faucibus quam quis lacus ullamcorper tempor. Curabitur rutrum rhoncus tempor."
+        }
+    ]
+}

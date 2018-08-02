@@ -1,0 +1,35 @@
+body {
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+#message-form{
+    width: 100%;
+}
+
+.message {
+    margin: 10px 0;
+}
+.message .avatar img{
+    width: 80px;
+    height: 80px;
+}
+
+.message .media-body{
+    padding: 15px;
+    padding-top: 0;
+}
+
+.message .infos{
+    color: #fefefe;
+    font-weight: bold;
+}
+
+.message .content{
+    padding: 15px;
+    border-radius: 10px;
+}

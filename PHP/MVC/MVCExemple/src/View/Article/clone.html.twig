@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Dupliquer article - {{ parent() }}{% endblock %}
+
+{% block body %}
+<form action='' method="POST">
+    {% embed "Decorator/card.html.twig" with {"classes" : "border-info"} %}
+
+        {% block header %}
+            Dupliquer un article
+        {% endblock %}
+
+        {% block body %}
+            Voulez-vous dupliquer l'article "{{ entity.title }}" ?
+        {% endblock %}
+
+        {% block footer %}
+            <button type="submit" name="delete" class="btn btn-info"> Oui </button>
+            <a class="btn btn-secondary" href="/{{ path }}/article/index"> Annuler </a>
+        {% endblock %}
+
+    {% endembed %}
+</form>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends ('layout.html.twig') %}
+{% block body %}
+<div class="card">
+    <div class="card-header"><span class="lead"><i class="fa fa-newspaper"></i> Liste des articles</span></div>
+    <div class="card-body">
+        <div class="float-right">
+            <a class="btn btn-success" href="/{{ path }}/article/new"><i class="fa fa-plus"></i> Ajouter un article</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Titre</th>
+                <th>Date création</th>
+                <th>Date modification</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entity in entities %}
+            <tr>
+                <td>{{ entity.title }}</td>
+                <td>{{ entity.dateCreate|date("d/m/Y H:i") }}</td>
+                <td>{{ entity.dateUpdate|date("d/m/Y H:i") }}</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="/{{ path }}/article/edit/{{ entity.id }}" class="btn btn-secondary"><i class="fa fa-pencil-alt"></i></a>
+                        <a href="/{{ path }}/article/clone/{{ entity.id }}" class="btn btn-info"><i class="fas fa-clone"></i></a>
+                        <a href="/{{ path }}/article/delete/{{ entity.id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="card-footer">
+     {{ count }} article(s)
+    </div>
+</div>
+{% endblock %}

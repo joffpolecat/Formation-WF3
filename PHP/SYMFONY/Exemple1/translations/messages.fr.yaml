@@ -1,0 +1,35 @@
+add: Ajouter
+edit: Editer
+cancel: Annuler
+delete: Supprimer
+page_error: Il n'y a qu'une page|Il n'y a que %nbPages% pages
+app_title: WebForce3
+logout: Se déconnecter
+user : Utilisateur
+article:
+  edit: Modifier l'article <b> "%entity%" </b>
+  edit_success: L'article <b> "%entity%" </b> a bien été modifié
+  add: Ajouter un article
+  add_success: L'article <b> "%entity%"</b> a bien été ajouté
+  delete: Supprimer un article
+  delete_success: L'article <b> "%entity%" </b> a bien été supprimé
+  count: Article|Articles
+  article: Article
+  delete_message: Confirmer la suppression de l'article <b> "%entity%" </b>
+  count_label: Nombre d'articles
+  user: Utilisateur
+  list: .icon-newspaper Liste des articles
+  followers: "{0} Aucune personne suis l'article|{1} %count% personne suis l'article|[2, Inf[ %count% personnes suivent l'article"
+category:
+  edit: Modifier la catégorie <b> "%entity%" </b>
+  edit_success: la catégorie <b> "%entity%" </b> a bien été modifiée
+  add: Ajouter une catégorie
+  add_success: la catégorie <b> "%entity%"</b> a bien été ajoutée
+  delete: Supprimer une catégorie
+  delete_success: la catégorie <b> "%entity%" </b> a bien été supprimée
+  count: catégorie|catégories
+  category: Catégorie
+  delete_message: Confirmer la suppression de la catégorie <b> "%entity%" </b>
+  list: Liste des catégories
+  name: Nom des catégories
+  categories: Catégories

@@ -1,0 +1,20 @@
+{% extends 'admin/layout.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+{% embed 'decorator/_card.html.twig' %}
+    {% block header %}
+    Créer un nouvel article
+    {% endblock %}
+
+    {% block body %}
+        
+    {% endblock %}
+
+    {% block footer %}
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a class="btn btn-dark" href="{{ path('app_admin_article_index') }}" role="button">Annuler</a>
+    {% endblock %}
+ {% endembed %}
+{{ form_end(form) }}
+
+{% endblock %}

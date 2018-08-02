@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+    <div class="list-group">
+    {% for entity in entities %} 
+        <a href="{{ path('app_article_show', {'id': entity.id}) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ entity.title }}</h5>
+            <small>{{ entity.dateCreate|date('d/m/Y H:i') }}</small>
+            </div>
+            {% for category in entity.categories %}
+                <span class="badge badge-secondary mr-1">{{ category }} </span>
+            {% endfor %}
+        </a>
+    {% endfor %}
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="{{ path('app_article_index') }}"><i class="fas fa-angle-double-left"></i></a>
+            </li>
+
+            {% for p in 1..nbPages %} 
+                <li class="page-item {% if p == page %} {{ 'active' }} {% endif %}"><a class="page-link" href="{{ path('app_article_index', {'page': p}) }}">{{ p }}</a></li>  
+            {% endfor %}
+            
+            <li class="page-item">
+                <a class="page-link" href="{{ path('app_article_index', {'page': nbPages}) }}"><i class="fas fa-angle-double-right"></i></a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

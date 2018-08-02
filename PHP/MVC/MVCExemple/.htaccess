@@ -1,0 +1,8 @@
+# Activation de la réécriture
+RewriteEngine on
+RewriteBase /CoursNumericall/PHP/MVC/MVCExemple/
+# Conditions de réécriture, ne doit pas être un fichier ou dossier éxistant 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Redirection de tout autres liens vers index.php
+RewriteRule . index.php [L,QSA]

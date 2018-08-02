@@ -1,0 +1,21 @@
+
+{% extends 'admin/layout.html.twig' %}
+{% block body %}
+
+{{ form_start(form) }}
+{% embed 'decorator/_card.html.twig' %}
+    {% block header %}
+    {{ 'article.delete'|trans( {'%entity%' : entity.title} )|raw }}
+    {% endblock %}
+
+    {% block body %}
+    {{ 'article.delete_message'|trans( {'%entity%' : entity.title} )|raw }}
+    {% endblock %}
+
+    {% block footer %}
+        <button type="submit" class="btn btn-danger">{{ 'delete'|trans }}</button>
+        <a class="btn btn-dark" href="{{ path('app_admin_article_index') }}" role="button">{{ 'cancel'|trans }}</a>
+    {% endblock %}
+ {% endembed %}
+{{ form_end(form) }}
+{% endblock %}

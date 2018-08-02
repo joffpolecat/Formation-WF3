@@ -1,0 +1,11 @@
+<div class="card {% if classes is defined %}{{ classes }}{% endif %}">
+  <div class="card-header">
+    {% block header %}{% endblock %}
+  </div>
+  <div class="card-body">
+    {% block body %}{% endblock %}
+  </div>
+  <div class="card-footer text-muted">
+    {% block footer %}{% endblock %}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Suppression article - {{ parent() }}{% endblock %}
+
+{% block body %}
+<form action='' method="POST">
+    {% embed "Decorator/card.html.twig" with {"classes" : "border-danger"} %}
+
+        {% block header %}
+            Supprimer un article
+        {% endblock %}
+
+        {% block body %}
+            Voulez-vous supprimer l'article "{{ entity.title }}" ?
+        {% endblock %}
+
+        {% block footer %}
+            <button type="submit" name="delete" class="btn btn-danger"> Oui </button>
+            <a class="btn btn-secondary" href="/{{ path }}/article/index"> Annuler </a>
+        {% endblock %}
+
+    {% endembed %}
+</form>
+{% endblock %}
